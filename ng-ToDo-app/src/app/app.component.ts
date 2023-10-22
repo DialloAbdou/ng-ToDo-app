@@ -1,9 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
+import { Tache } from "./Tache";
+import { TACHES } from "./mock-Tache-Liste";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: "app.component.html"
+  selector: "app-root",
+  templateUrl: "app.component.html",
 })
-export class AppComponent {
-  title = 'To Do';
+export class AppComponent implements OnInit {
+  ListeTaches: Tache[] = TACHES;
+
+  ngOnInit(): void {
+    console.table(this.ListeTaches);
+  }
 }
