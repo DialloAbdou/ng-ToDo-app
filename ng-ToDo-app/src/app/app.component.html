@@ -6,5 +6,21 @@
 
     <body>
         <h1 class="center header">Liste des Taches</h1>
+        <div class="container">
+        <div class=" row">
+         <div *ngFor="let tache of ListeTaches ">
+         <div class="  horizontal"todoBorderCard>
+          <div class="card blue-grey" >
+            <div class="card-content white-text">
+                <p class="col m4">{{tache.description}}</p>
+                <p class="col m4">{{tache.EtatEncour}}</p>
+                <p class="col m4">{{tache.prioriteEncour}}</p>
+            </div>
+          </div>
+         </div>
+         </div> 
+        </div>
+
+        </div>
     </body>
 </html>

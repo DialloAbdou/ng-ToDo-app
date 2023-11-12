@@ -1,4 +1,6 @@
 import { Tache } from "./Tache";
+import { Etat } from "./TacheEtatEnum";
+import { Priorite } from "./TachePrioriteEnum";
 
 export const TACHES: Tache[] = [
     {
@@ -6,8 +8,8 @@ export const TACHES: Tache[] = [
         description: "Analyse des bésoins fonctionnelles",
         isActive: true,
         dateCreation: new Date,
-        EtatEncour:  "En cours", 
-        prioriteEncour : "Moyen"
+        EtatEncour:  Etat.EnCours,
+        prioriteEncour : Priorite.Moyen
 
     },
 
@@ -16,8 +18,8 @@ export const TACHES: Tache[] = [
         description: "Définir l'architecture Projet",
         isActive: true,
         dateCreation: new Date,
-        EtatEncour:  "En Attente",
-        prioriteEncour : "Faible"
+        EtatEncour:  Etat.EnAttente,
+        prioriteEncour : Priorite.Faible
 
     },
     {
@@ -25,8 +27,8 @@ export const TACHES: Tache[] = [
         description: "Renforcer l'ergonomie des fonctionnalité ",
         isActive: true,
         dateCreation: new Date,
-        EtatEncour:  "En cours", 
-        prioriteEncour :"Eleve", 
+        EtatEncour:  Etat.EnCours,
+        prioriteEncour :Priorite.Eleve
 
     },
     {
@@ -34,8 +36,8 @@ export const TACHES: Tache[] = [
         description: "Définir les besoins d'importance Jira",
         isActive: true,
         dateCreation: new Date,
-        EtatEncour:  "En Attente",
-        prioriteEncour : "Faible"
+        EtatEncour:  Etat.EnAttente,
+        prioriteEncour :Priorite.Faible
 
     },
     {
@@ -43,8 +45,8 @@ export const TACHES: Tache[] = [
         description: "Construire l'infratructure du projet",
         isActive: true,
         dateCreation: new Date,
-        EtatEncour: "Fait", 
-        prioriteEncour : "Moyen", 
+        EtatEncour: Etat.Fait,
+        prioriteEncour : Priorite.Moyen
 
     },
     {
@@ -52,8 +54,8 @@ export const TACHES: Tache[] = [
         description: "Création des nouvelles API",
         isActive: true,
         dateCreation: new Date,
-        EtatEncour:  "En cours",
-        prioriteEncour : "Moyen", 
+        EtatEncour:   Etat.EnCours,
+        prioriteEncour : Priorite.Moyen
 
     },
     {
@@ -61,8 +63,8 @@ export const TACHES: Tache[] = [
         description: "Analyse des dysfonctionnements differents bugs",
         isActive: true,
         dateCreation: new Date,
-        EtatEncour: "En cours",
-        prioriteEncour :"Eleve",
+        EtatEncour: Etat.EnCours,
+        prioriteEncour :Priorite.Eleve
 
     },
     {
@@ -70,8 +72,8 @@ export const TACHES: Tache[] = [
         description: "Faire des testes fonctionnelles de l'application",
         isActive: true,
         dateCreation: new Date,
-        EtatEncour:  "En cours",
-        prioriteEncour : "Moyen",
+        EtatEncour:  Etat.EnCours,
+        prioriteEncour : Priorite.Moyen
 
     },
     {
@@ -79,8 +81,8 @@ export const TACHES: Tache[] = [
         description: " Préparation l'interface de l'application",
         isActive: true,
         dateCreation: new Date,
-        EtatEncour:  "En cours", 
-        prioriteEncour : "Moyen", 
+        EtatEncour:  Etat.EnCours,
+        prioriteEncour : Priorite.Moyen
 
     },
 ];
