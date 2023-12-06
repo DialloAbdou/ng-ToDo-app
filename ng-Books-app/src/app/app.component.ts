@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Book } from './book';
 import { BOOKS } from './mock-book-list';
 
@@ -6,18 +6,17 @@ import { BOOKS } from './mock-book-list';
   selector: 'app-root',
   templateUrl:'./app.component.html'
 })
-export class AppComponent{
+export class AppComponent implements OnInit {
   title = 'Liste des Livres';
-  listLivres: Book[]|undefined
-  /*
-   * Les Constructeurs
-  */
+  listLivres:Book[] = BOOKS
 
-  /*
-   * Les Constructeurs
-  */
-  constructor()
-  {
-
+  ngOnInit(): void {
+    console.log(this.listLivres)
+    this.selectBook(this.listLivres[0])
   }
+  
+  selectBook(book: Book){
+    console.log(` le nom du Livre est : ${book.Name}`)
+  }
+
 }
