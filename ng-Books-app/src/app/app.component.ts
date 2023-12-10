@@ -11,12 +11,12 @@ export class AppComponent implements OnInit {
   listLivres:Book[] = BOOKS
 
   ngOnInit(): void {
-    console.log(this.listLivres)
-    this.selectBook(this.listLivres[0])
+    console.log(this.listLivres) //affiche le tableau
   }
   
-  selectBook(book: Book){
-    console.log(` le nom du Livre est : ${book.Name}`)
+  selectBook(event:MouseEvent){
+    const index:number= +(event.target as HTMLInputElement).value
+    console.log(` le nom du Livre est : ${this.listLivres[index].Name}`)
   }
 
 }
